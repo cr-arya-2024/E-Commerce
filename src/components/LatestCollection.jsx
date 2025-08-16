@@ -19,7 +19,7 @@ const LatestCollection = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, maxime?
         </p>
       </div>
-      <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-5'> {
+      <div className='grid grid-cols-2   sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-5'> {
         latestProducts.map((item, index) => {
           return <Productitem key={index} id={item._id} img={item.image} name={item.name} price={item.price} />
         })}</div>
