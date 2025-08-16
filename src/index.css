@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,7 +9,20 @@ a.active hr {
     animation: slideIn 0.3s ease-out forwards;
 }
 
-
+.mozilla-headline-<uniquifier> {
+    font-family: "Mozilla Headline", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+  @media (max-width:640px){
+    a.active{
+        background-color:black;
+        color:white;
+    }
+  }
 /* Slide in animation for the underline */
 @keyframes slideIn {
     from {
