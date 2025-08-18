@@ -103,7 +103,7 @@ useEffect(()=>{
     <div className='grid grid-cols-2   sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-5'>
 {
   filterProducts.map((item,index)=>{
-    return <Productitem key={index} id={item._id} img={item.image} name={item.name} price={item.price} />
+    return <Productitem key={index} id={item._id} img={item.image[0]} name={item.name} price={item.price} />
   })
 }
     </div>
