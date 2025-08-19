@@ -4,7 +4,7 @@ import { ShopContext } from '../context/ShopContext'
 const Products = () => {
   const { productId } = useParams()
   const { products,addToCart } = useContext(ShopContext)
-  const [productData, setproductData] = useState(1)
+  const [productData, setproductData] = useState(0)
   const [img, setImg] = useState('')
   const fetchProductData = async () => {
     products.map((itm) => {
@@ -15,6 +15,7 @@ const Products = () => {
       }
     })
   }
+  
   useEffect(() => { fetchProductData() }, [productId])
   // console.log(productData);
 

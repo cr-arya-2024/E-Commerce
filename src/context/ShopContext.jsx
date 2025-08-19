@@ -10,19 +10,31 @@ const ShopContextProvider=({children})=>{
     const[showSearch,setShowSearch]=useState(0)
 const [cartItems,setCartItems]=useState({})
 
-const addToCart=async(itemId)=>{
+const addToCart=(itemId)=>{
 let cartData=structuredClone(cartItems)
 if(cartData[itemId]){
     cartData[itemId]+=1
 }else{
     cartData[itemId]=1
 }
+setCartItems(cartData)
 }
-useEffect(()=>{console.log(cartItems);
-},[cartItems])
+const getcartCount=()=>{
+    let count=0
+    for(const item  in cartItems){
+        try {
+            if(cartItems[item]>0){
+                count=+cartItems[item]
+            }
+        } catch (error) {
+            
+        }
+        return count
+    }
+}
 
 const value={
-    products,currency,delivery_fee,search,setSearch,showSearch,setShowSearch,cartItems,setCartItems,addToCart
+    products,currency,delivery_fee,search,setSearch,showSearch,setShowSearch,cartItems,getcartCount,setCartItems,addToCart
 }
     return (
         <ShopContext.Provider value={value}>
