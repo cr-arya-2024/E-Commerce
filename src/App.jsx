@@ -10,12 +10,13 @@ import PlaceOrder from './pages/PlaceOrder'
 import Cart from './pages/Cart'
 import Orders from './pages/Orders'
 import Navbar from './components/Navbar'
-
+import { ToastContainer, toast } from 'react-toastify';
 function App() {
   
 
   return (
     <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
+      <ToastContainer/>
       <Navbar/>
    <Routes >
     <Route path='/' element={<Home/>}/>
