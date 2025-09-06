@@ -49,7 +49,7 @@ setFilterProducts(products)
 
 useEffect(()=>{
   applyfilter()
-},[category,subCategory,search,showSearch ])
+},[category,subCategory,search,showSearch,products ])
 
 
   return (
